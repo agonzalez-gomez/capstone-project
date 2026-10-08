@@ -1,0 +1,14 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "MERN Capstone Project",
+  "type": "module",
+  "scripts": {
+    "validate":"render blueprints validate ./render.yaml",
+    "deploy":"render blueprints launch ./render.yaml",
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
