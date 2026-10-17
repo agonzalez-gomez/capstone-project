@@ -1,3 +1,5 @@
+import { Button } from "@mui/material";
+
 export default function About() {
   return (
     <div className="page about-page">

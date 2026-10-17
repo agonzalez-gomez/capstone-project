@@ -1,6 +1,6 @@
 import { type Request, type Response } from 'express';
 import bcrypt from 'bcrypt';
-import database from '../db.js';
+import getDatabase from '../db/db.js';
 import User from '../models/users.js';
 
 export default async function register(req: Request, res: Response) {
@@ -13,6 +13,8 @@ export default async function register(req: Request, res: Response) {
                 message: "There was an error. Please provide username and password."
             })
         }
+
+        const database = await getDatabase()
 
         if (!database) {
             return res.status(500).json({ message: "Unable to connect to database" })

@@ -1,6 +1,6 @@
 import { type Request, type Response } from 'express';
 import bcrypt from 'bcrypt';
-import database from '../db.js';
+import getDatabase from '../db/db.js';
 import User from '../models/users.js';
 import jwt from 'jsonwebtoken';
 
@@ -16,6 +16,8 @@ export default async function login(req: Request, res: Response) {
                 message: "There was an error. Please provide username and password."
             })
         }
+
+        const database = await getDatabase()
 
         if (!database) {
             return res.status(500).json({ message: "Unable to connect to database" })
@@ -42,9 +44,9 @@ export default async function login(req: Request, res: Response) {
 
         const jwtpayload: JWTPayload = { userId: userDoc._id.toString(), username: userDoc.username };
 
-        const token = jwt.sign(jwtpayload, secret, { expiresIn: '1h' });
+        const token = jwt.sign(jwtpayload, secret, { expiresIn: '10h' });
 
-        return res.json({ token, message: "Login successful"})
+        return res.status(200).json({ token, message: "Login successful"})
 
         // // 3. Generate JWT Payload
         // const payload = { userId: user._id, email: user.email };
