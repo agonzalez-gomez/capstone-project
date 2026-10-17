@@ -1,0 +1,65 @@
+[
+  {
+    "category": "Getting Started",
+    "title": "Welcome to the Help Center",
+    "slug": "welcome-to-the-help-center",
+    "subtitle": "A guide to finding your way around",
+    "description": "Learn how to navigate the help center and find the information you need.",
+    "pages": [
+      {
+        "title": "A helpful place to begin",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vitae justo vel erat posuere volutpat. This article introduces the help center and explains how its guides are organized.",
+        "page": 1
+      },
+      {
+        "title": "Finding an answer",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Browse by category or open an article to read its pages in order. Nunc interdum lacus sit amet dolor facilisis, at posuere lorem consequat.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Managing Your Account",
+    "slug": "managing-your-account",
+    "subtitle": "Keep your account information up to date",
+    "description": "An overview of common account settings and profile details.",
+    "pages": [
+      {
+        "title": "Your profile",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Update the details associated with your profile so your account information stays current. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.",
+        "page": 1
+      },
+      {
+        "title": "Reviewing account settings",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Donec ullamcorper nulla non metus auctor fringilla. Review your settings periodically and make changes when needed. Sed posuere consectetur est at lobortis, while integer posuere erat a ante venenatis dapibus.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Troubleshooting Common Issues",
+    "slug": "troubleshooting-common-issues",
+    "subtitle": "A few steps to try when something goes wrong",
+    "description": "General steps for diagnosing and resolving common problems.",
+    "pages": [
+      {
+        "title": "Start with the basics",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Check that you have an active connection and try the action again. If the issue persists, refresh the page and note any message displayed.",
+        "page": 1
+      },
+      {
+        "title": "When you still need help",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Nullam quis risus eget urna mollis ornare vel eu leo. Write down what you were doing and any error details before asking for help. A clear description can make it easier to understand the problem and suggest next steps.",
+        "page": 2
+      }
+    ]
+  }
+]

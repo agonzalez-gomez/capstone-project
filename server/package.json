@@ -9,6 +9,7 @@
     "start": "tsx server.ts",
     "dev": "nodemon --exec 'tsx --env-file=.env' server.ts",
     "test": "NODE_ENV=test mocha --require tsx tests/**/*.test.ts",
+    "seed:articles": "tsx scripts/seedArticles.ts",
     "prettier": "prettier --write ."
   },
   "keywords": [],
