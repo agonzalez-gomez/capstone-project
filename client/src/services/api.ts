@@ -1,4 +1,5 @@
 import { getGridUtilityClass, paperClasses } from "@mui/material";
+import type { ArticleList } from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5050";
 
@@ -24,7 +25,7 @@ async function login(email: string, password: string) {
   });
   if (!response.ok) throw new Error("Failed to login");
 
-  const data = await response.json() as unknown as {
+  const data = (await response.json()) as unknown as {
     token: string;
     message: string;
   };
@@ -48,11 +49,11 @@ async function register(email: string, password: string) {
   });
 
   if (!response.ok) {
-    const data = await response.json() as unknown as {
+    const data = (await response.json()) as unknown as {
       message: string;
     };
 
-    return data.message
+    return data.message;
   }
   return true;
 }
@@ -60,22 +61,36 @@ async function register(email: string, password: string) {
 export async function verifyAuth() {
   try {
     console.log({
-      url: `${API_URL}/verify`, headers: {
+      url: `${API_URL}/verify`,
+      headers: {
         ...getAuthHeaders(),
-      }
-    })
+      },
+    });
     const response = await fetch(`${API_URL}/verify`, {
       ...getAuthHeaders(),
     });
 
-    console.log(response)
+    console.log(response);
     if (!response.ok) return false;
     return true;
-  }
-    catch (e) {
+  } catch (e) {
     console.error(e);
-    return false
-    }
+    return false;
+  }
+}
+
+async function listArticles() {
+  const response = await fetch(`${API_URL}/articles`, {
+    ...getAuthHeaders(),
+  });
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as unknown as ArticleList;
+
+  return data;
 }
 
 // export async function fetchRecords() {
@@ -128,7 +143,8 @@ export async function verifyAuth() {
 const API = {
   login,
   verifyAuth,
-  register
+  register,
+  listArticles,
 };
 
 export default API;

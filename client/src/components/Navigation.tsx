@@ -7,13 +7,11 @@ export default function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const {signedIn} = useAuth()
+  const { signedIn } = useAuth();
 
   useEffect(() => {
-    if (signedIn)
-        navigate('/')
-  }, [signedIn])
-
+    if (signedIn) navigate("/");
+  }, [signedIn]);
 
   return (
     <nav>
@@ -49,7 +47,7 @@ export default function Navigation() {
           </Button>
         </Box>
 
-        {!signedIn &&
+        {!signedIn && (
           <Button
             variant={location.pathname == "/login" ? "outlined" : "text"}
             color="inherit"
@@ -57,7 +55,7 @@ export default function Navigation() {
           >
             Log In
           </Button>
-        }
+        )}
       </AppBar>
     </nav>
   );

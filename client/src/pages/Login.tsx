@@ -76,9 +76,9 @@ export default function Login() {
             gap: 1,
           }}
         >
-          <Button fullWidth
-            onClick={() => navigate("/signup")}
-          >Sign Up</Button>
+          <Button fullWidth onClick={() => navigate("/signup")}>
+            Sign Up
+          </Button>
 
           <Button
             fullWidth

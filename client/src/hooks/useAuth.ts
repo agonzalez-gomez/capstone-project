@@ -9,16 +9,15 @@ export default function useAuth() {
   }, []);
 
   const checkLoggedIn = async () => {
-    console.log("Checking signed in")
+    console.log("Checking signed in");
     try {
-        const isVerified = await API.verifyAuth();
-        console.log("User is signed in: ", isVerified)
-        if (isVerified) {
-            setSignedIn(true);
-        }
-        else {
-            setSignedIn(false);
-        }
+      const isVerified = await API.verifyAuth();
+      console.log("User is signed in: ", isVerified);
+      if (isVerified) {
+        setSignedIn(true);
+      } else {
+        setSignedIn(false);
+      }
     } catch (e) {
       console.error(e);
       setSignedIn(false);

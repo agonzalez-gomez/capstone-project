@@ -61,5 +61,131 @@
         "page": 2
       }
     ]
+  },
+  {
+    "category": "Getting Started",
+    "title": "Navigating the Help Center",
+    "slug": "navigating-the-help-center",
+    "subtitle": "Find articles and browse topics",
+    "description": "Learn a few simple ways to explore help center content.",
+    "pages": [
+      {
+        "title": "Browse by category",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Choose a category to see related articles, then open a guide to view its pages. Curabitur blandit tempus porttitor.",
+        "page": 1
+      },
+      {
+        "title": "Use article pages",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Donec sed odio dui. Each article may contain several pages with additional details. Read them in order to follow the complete guide, and return to the category when you are ready to explore another topic.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Getting Started",
+    "title": "Understanding Help Articles",
+    "slug": "understanding-help-articles",
+    "subtitle": "Make the most of each guide",
+    "description": "An introduction to the information and sections found in help articles.",
+    "pages": [
+      {
+        "title": "Article summaries",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Article summaries provide a quick overview of the subject and help you decide whether a guide matches your question.",
+        "page": 1
+      },
+      {
+        "title": "Detailed instructions",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Follow each page for more context and practical steps. If a topic is unfamiliar, review the preceding page before continuing.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Updating Your Profile",
+    "slug": "updating-your-profile",
+    "subtitle": "Change the details associated with your account",
+    "description": "A general guide to reviewing and updating profile information.",
+    "pages": [
+      {
+        "title": "Review your information",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Open your profile settings and review the information currently associated with your account. Check each detail before making changes.",
+        "page": 1
+      },
+      {
+        "title": "Save your changes",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Update the fields that need attention and save your changes. Return to your profile afterward to confirm the new information appears as expected.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Keeping Your Account Secure",
+    "slug": "keeping-your-account-secure",
+    "subtitle": "Good habits for protecting your account",
+    "description": "Simple reminders for maintaining the security of your account.",
+    "pages": [
+      {
+        "title": "Protect your sign-in details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Keep your sign-in details private and avoid sharing them with others. Use a strong, unique password where your account settings allow it.",
+        "page": 1
+      },
+      {
+        "title": "Review account activity",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Vestibulum id ligula porta felis euismod semper. Pay attention to account activity and settings. If something looks unfamiliar, use the available account controls to secure your access and seek assistance.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Fixing Sign-In Problems",
+    "slug": "fixing-sign-in-problems",
+    "subtitle": "Steps to try when you cannot sign in",
+    "description": "Check a few common causes of sign-in difficulties.",
+    "pages": [
+      {
+        "title": "Check your sign-in details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Carefully check the information you entered and make sure there are no extra spaces. If you recently changed your password, use the updated one.",
+        "page": 1
+      },
+      {
+        "title": "Try again after refreshing",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Sed posuere consectetur est at lobortis. Refresh the page and try again. If the problem continues, note the error message and contact support with a description of what happened.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Resolving Page Loading Issues",
+    "slug": "resolving-page-loading-issues",
+    "subtitle": "What to try when a page does not load",
+    "description": "Basic steps for investigating pages that load slowly or fail to open.",
+    "pages": [
+      {
+        "title": "Check your connection",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Confirm that your internet connection is working, then reload the page. If other sites are also unavailable, the issue may be with your connection.",
+        "page": 1
+      },
+      {
+        "title": "Retry and note the details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Nullam quis risus eget urna mollis ornare vel eu leo. Wait a short time and try loading the page again. If it still fails, note which page you were opening and any message displayed so support can investigate.",
+        "page": 2
+      }
+    ]
   }
 ]

@@ -70,13 +70,9 @@ export default function SignUp() {
           onChange={(e) => {
             setEmail2(e.target.value);
           }}
-          error={
-            email && email2 &&
-            email !== email2 ? true: false
-          }
+          error={email && email2 && email !== email2 ? true : false}
           helperText={
-            email && email2 &&
-            email !== email2 ? 'Emails do not match!': false
+            email && email2 && email !== email2 ? "Emails do not match!" : false
           }
         />
         <TextField
@@ -94,13 +90,11 @@ export default function SignUp() {
           onChange={(e) => {
             setPassword2(e.target.value);
           }}
-           error={
-            password && password2 &&
-            password !== password2 ? true : false
-          }
+          error={password && password2 && password !== password2 ? true : false}
           helperText={
-            password && password2 &&
-            password !== password2 ? 'Passwords do not match!': false
+            password && password2 && password !== password2
+              ? "Passwords do not match!"
+              : false
           }
         />
         <Box
@@ -110,9 +104,9 @@ export default function SignUp() {
             gap: 1,
           }}
         >
-          <Button fullWidth
-            onClick={() => navigate('/login')}
-          >Back</Button>
+          <Button fullWidth onClick={() => navigate("/login")}>
+            Back
+          </Button>
 
           <Button
             fullWidth
@@ -124,7 +118,7 @@ export default function SignUp() {
               password.length > 20 ||
               !email ||
               !email.includes("@") ||
-              password !== password2 || 
+              password !== password2 ||
               email !== email2
             }
             onClick={() => register()}

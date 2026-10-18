@@ -1,14 +1,11 @@
-import dotenv from 'dotenv';
+import dotenv from "dotenv";
 dotenv.config();
-import  mongoose from 'mongoose';
+import mongoose from "mongoose";
 
+const clientURI = process.env.MONGODB_URI ?? "";
+const databaseName = process.env.DB_NAME ?? "";
 
-const clientURI = process.env.MONGODB_URI ?? '';
-const databaseName = process.env.DB_NAME ?? '';
-
-console.log('MongoDB URI:', clientURI, "DB:", databaseName);
-
-
+console.log("MongoDB URI:", clientURI, "DB:", databaseName);
 
 async function getDatabase(): Promise<typeof mongoose | false> {
   // If Mongoose is already connected, return the existing connection instance
@@ -19,16 +16,15 @@ async function getDatabase(): Promise<typeof mongoose | false> {
   try {
     // Connect Mongoose to the URI and specify the database name
     await mongoose.connect(clientURI, {
-      dbName: databaseName
+      dbName: databaseName,
     });
-    
-    console.log('✅ Connected to MongoDB via Mongoose');
-    return mongoose; 
+
+    console.log("✅ Connected to MongoDB via Mongoose");
+    return mongoose;
   } catch (err) {
-    console.error('❌ Mongoose connection failed');
-    return false
+    console.error("❌ Mongoose connection failed");
+    return false;
   }
 }
 
-
-export default getDatabase
+export default getDatabase;
