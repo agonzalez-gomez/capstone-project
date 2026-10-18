@@ -27,7 +27,7 @@ async function login(email: string, password: string) {
   const data = (await response.json()) as unknown as {
     token: string;
     message: string;
-  };
+  };  
 
   if (data?.token) {
     window.localStorage.setItem("troubleshootToken", data.token);
