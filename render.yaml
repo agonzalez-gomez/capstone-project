@@ -27,4 +27,4 @@ services:
       - key: NODE_ENV
         value: production
       - key: VITE_API_URL
-        value: https://capstone-backend.onrender.com
+        value: https://capstone-project-backend-p7k4.onrender.com
