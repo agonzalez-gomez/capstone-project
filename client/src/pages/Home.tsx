@@ -4,7 +4,6 @@ import API from "../services/api";
 import {
   Autocomplete,
   Box,
-  Button,
   Card,
   CardActionArea,
   CardContent,
@@ -18,7 +17,7 @@ export default function Home() {
   const [articles, setArticles] = useState<ArticleList>([]);
 
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  // const [error, setError] = useState<string | null>(null);
 
   const navigate = useNavigate();
 
@@ -36,12 +35,12 @@ export default function Home() {
         setArticles(list);
         setLoading(false);
       } else {
-        setError("No Articles found!");
+        // setError("No Articles found!");
         setLoading(false);
       }
     } catch (e) {
       console.error(e);
-      setError("Error loading articles!");
+      // setError("Error loading articles!");
       setLoading(false);
     }
   };
@@ -103,7 +102,7 @@ export default function Home() {
         getOptionLabel={(option) => option.title}
         getOptionValue={(option) => option.slug}
         groupBy={(option) => option.category}
-        onChange={(e, val) => navigate(`/article/${val}`)}
+        onChange={(_, val) => navigate(`/article/${val}`)}
         renderInput={(params) => (
           <TextField {...params} label="Search Articles..." />
         )}
