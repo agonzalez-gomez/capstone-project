@@ -2,6 +2,7 @@ import { Box, Button, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 import API from "../services/api";
 import { useNavigate } from "react-router-dom";
+import useAuth from "../hooks/useAuth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -10,6 +11,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
 
   const navigate = useNavigate();
+  const { checkLoggedIn } = useAuth();
 
   const login = async () => {
     if (loading) return false;
@@ -20,6 +22,7 @@ export default function Login() {
 
       if (res) {
         console.log("Logged in!");
+        await checkLoggedIn();
         navigate("/");
       } else {
         setError("Error logging in - check your username and password!");

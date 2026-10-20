@@ -74,7 +74,7 @@ export default function Home() {
           position: "absolute",
           inset: 0,
           display: "flex",
-          flexDirection: "center",
+          justifyContent: "center",
           alignItems: "center",
         }}
       >
@@ -86,12 +86,8 @@ export default function Home() {
   return (
     <Box
       sx={{
-        position: "absolute",
-        inset: 0,
         display: "flex",
         flexDirection: "column",
-        padding: 4,
-        mt: 4,
         width: "100%",
         alignItems: "center",
         gap: 4,
@@ -102,7 +98,9 @@ export default function Home() {
         getOptionLabel={(option) => option.title}
         getOptionValue={(option) => option.slug}
         groupBy={(option) => option.category}
-        onChange={(_, val) => navigate(`/article/${val}`)}
+        onChange={(_, val) => {
+          if (val) navigate("/articles/" + val);
+        }}
         renderInput={(params) => (
           <TextField {...params} label="Search Articles..." />
         )}
@@ -121,7 +119,7 @@ export default function Home() {
       >
         {groupedArticles.map((category) => {
           return (
-            <Card elevation={4}>
+            <Card key={category.category} elevation={4}>
               <CardContent
                 sx={{
                   display: "flex",
@@ -134,6 +132,7 @@ export default function Home() {
                 {category.articles.map((article) => {
                   return (
                     <Card
+                      key={article.slug}
                       sx={{
                         p: 1,
                       }}

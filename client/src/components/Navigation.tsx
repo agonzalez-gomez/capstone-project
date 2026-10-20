@@ -7,11 +7,16 @@ export default function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { signedIn } = useAuth();
+  const { signedIn, logout } = useAuth();
 
   useEffect(() => {
-    if (signedIn) navigate("/");
-  }, [signedIn]);
+    if (
+      signedIn &&
+      (location.pathname == "/login" || location.pathname == "/signup")
+    ) {
+      navigate("/");
+    }
+  }, [signedIn, location.pathname]);
 
   return (
     <nav>
@@ -54,6 +59,18 @@ export default function Navigation() {
             onClick={() => navigate("/login")}
           >
             Log In
+          </Button>
+        )}
+
+        {signedIn && (
+          <Button
+            color="inherit"
+            onClick={() => {
+              logout();
+              navigate("/login");
+            }}
+          >
+            Log Out
           </Button>
         )}
       </AppBar>

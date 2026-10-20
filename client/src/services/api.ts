@@ -37,6 +37,10 @@ async function login(email: string, password: string) {
   return false;
 }
 
+function logout() {
+  window.localStorage.removeItem("troubleshootToken");
+}
+
 async function register(email: string, password: string) {
   const response = await fetch(`${API_URL}/register`, {
     method: "POST",
@@ -141,6 +145,7 @@ async function listArticles() {
 
 const API = {
   login,
+  logout,
   verifyAuth,
   register,
   listArticles,
