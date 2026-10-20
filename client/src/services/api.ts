@@ -1,4 +1,4 @@
-import type { ArticleList } from "../types";
+import type { ArticleDetail, ArticleList } from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5050";
 
@@ -96,6 +96,20 @@ async function listArticles() {
   return data;
 }
 
+async function getArticle(slug: string) {
+  const response = await fetch(`${API_URL}/articles/${slug}`, {
+    ...getAuthHeaders(),
+  });
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as unknown as ArticleDetail;
+
+  return data;
+}
+
 // export async function fetchRecords() {
 //   const response = await fetch(`${API_URL}/record`);
 //   if (!response.ok) throw new Error("Failed to fetch records");
@@ -149,6 +163,7 @@ const API = {
   verifyAuth,
   register,
   listArticles,
+  getArticle,
 };
 
 export default API;

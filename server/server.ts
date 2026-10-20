@@ -4,6 +4,7 @@ import login from "./routes/login.js";
 import register from "./routes/register.js";
 import verify from "./routes/verify.js";
 import list from "./routes/list.js";
+import article from "./routes/article.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -18,6 +19,7 @@ app.post("/register", register);
 app.post("/login", login);
 app.get("/verify", verify);
 app.get("/articles", list);
+app.get("/articles/:slug", article);
 
 // start the Express server
 app.listen(PORT, () => {
