@@ -5,7 +5,7 @@ import mongoose from "mongoose";
 const clientURI = process.env.MONGODB_URI ?? "";
 const databaseName = process.env.DB_NAME ?? "";
 
-console.log("MongoDB URI:", clientURI, "DB:", databaseName);
+console.log("MongoDB URI set:", Boolean(clientURI), "DB:", databaseName);
 
 async function getDatabase(): Promise<typeof mongoose | false> {
   // If Mongoose is already connected, return the existing connection instance
@@ -22,7 +22,7 @@ async function getDatabase(): Promise<typeof mongoose | false> {
     console.log("✅ Connected to MongoDB via Mongoose");
     return mongoose;
   } catch (err) {
-    console.error("❌ Mongoose connection failed");
+    console.error("❌ Mongoose connection failed", err);
     return false;
   }
 }
