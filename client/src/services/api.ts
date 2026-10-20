@@ -1,4 +1,9 @@
-import type { ArticleDetail, ArticleList } from "../types";
+import type {
+  ArticleDetail,
+  ArticleList,
+  ArticleStats,
+  SessionUpdate,
+} from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5050";
 
@@ -27,7 +32,7 @@ async function login(email: string, password: string) {
   const data = (await response.json()) as unknown as {
     token: string;
     message: string;
-  };  
+  };
 
   if (data?.token) {
     window.localStorage.setItem("troubleshootToken", data.token);
@@ -110,6 +115,46 @@ async function getArticle(slug: string) {
   return data;
 }
 
+async function getArticleStats(slug: string) {
+  const response = await fetch(`${API_URL}/articles/${slug}/stats`, {
+    ...getAuthHeaders(),
+  });
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as unknown as ArticleStats;
+
+  return data;
+}
+
+async function startSession(slug: string) {
+  const response = await fetch(`${API_URL}/sessions`, {
+    method: "POST",
+    ...getAuthHeaders(),
+    body: JSON.stringify({ slug }),
+  });
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as unknown as { _id: string };
+
+  return data._id;
+}
+
+async function updateSession(id: string, session: SessionUpdate) {
+  const response = await fetch(`${API_URL}/sessions/${id}`, {
+    method: "PATCH",
+    ...getAuthHeaders(),
+    body: JSON.stringify(session),
+  });
+
+  return response.ok;
+}
+
 // export async function fetchRecords() {
 //   const response = await fetch(`${API_URL}/record`);
 //   if (!response.ok) throw new Error("Failed to fetch records");
@@ -164,6 +209,9 @@ const API = {
   register,
   listArticles,
   getArticle,
+  getArticleStats,
+  startSession,
+  updateSession,
 };
 
 export default API;

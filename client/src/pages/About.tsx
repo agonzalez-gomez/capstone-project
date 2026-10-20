@@ -16,7 +16,8 @@ import useAuth from "../hooks/useAuth";
 const steps = [
   {
     label: "Choose your product",
-    description: "Start by selecting the device or software you need help with.",
+    description:
+      "Start by selecting the device or software you need help with.",
   },
   {
     label: "Narrow down the issue",

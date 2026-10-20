@@ -6,6 +6,13 @@ declare global {
     password: string;
   };
 
+  type SessionUpdatePayload = {
+    page?: number;
+    resolved?: boolean;
+    rating?: number;
+    comments?: string;
+  };
+
   type JWTPayload = {
     userId: string;
     username: string;

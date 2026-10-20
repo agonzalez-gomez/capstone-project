@@ -5,6 +5,9 @@ import register from "./routes/register.js";
 import verify from "./routes/verify.js";
 import list from "./routes/list.js";
 import article from "./routes/article.js";
+import articleStats from "./routes/articleStats.js";
+import createSession from "./routes/createSession.js";
+import updateSession from "./routes/updateSession.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -20,6 +23,9 @@ app.post("/login", login);
 app.get("/verify", verify);
 app.get("/articles", list);
 app.get("/articles/:slug", article);
+app.get("/articles/:slug/stats", articleStats);
+app.post("/sessions", createSession);
+app.patch("/sessions/:id", updateSession);
 
 // start the Express server
 app.listen(PORT, () => {

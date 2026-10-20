@@ -19,9 +19,7 @@ import useAuth from "../hooks/useAuth";
 
 export default function Home() {
   const [articles, setArticles] = useState<ArticleList>([]);
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(
-    null,
-  );
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -263,8 +261,7 @@ export default function Home() {
           <Typography variant="h5">Still need help?</Typography>
           <Typography color="text.secondary">
             If none of these guides solve your issue, contact your support
-            representative and let them know which steps you have already
-            tried.
+            representative and let them know which steps you have already tried.
           </Typography>
         </CardContent>
       </Card>
