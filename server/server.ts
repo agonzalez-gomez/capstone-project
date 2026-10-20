@@ -8,6 +8,8 @@ import article from "./routes/article.js";
 import articleStats from "./routes/articleStats.js";
 import createSession from "./routes/createSession.js";
 import updateSession from "./routes/updateSession.js";
+import createTicket from "./routes/createTicket.js";
+import listTickets from "./routes/listTickets.js";
 
 const PORT = process.env.PORT || 5050;
 const app = express();
@@ -26,6 +28,8 @@ app.get("/articles/:slug", article);
 app.get("/articles/:slug/stats", articleStats);
 app.post("/sessions", createSession);
 app.patch("/sessions/:id", updateSession);
+app.get("/tickets", listTickets);
+app.post("/tickets", createTicket);
 
 // start the Express server
 app.listen(PORT, () => {

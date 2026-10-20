@@ -13,6 +13,12 @@ declare global {
     comments?: string;
   };
 
+  type TicketPayload = {
+    sessionId?: string;
+    page?: number;
+    description?: string;
+  };
+
   type JWTPayload = {
     userId: string;
     username: string;

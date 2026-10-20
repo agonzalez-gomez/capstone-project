@@ -55,6 +55,15 @@ export default function Navigation() {
           >
             About
           </Button>
+          {signedIn && (
+            <Button
+              variant={location.pathname == "/tickets" ? "outlined" : "text"}
+              color="inherit"
+              onClick={() => navigate("/tickets")}
+            >
+              My Tickets
+            </Button>
+          )}
         </Box>
 
         {!signedIn && (

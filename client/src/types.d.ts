@@ -17,6 +17,16 @@ export type SessionUpdate = {
   comments?: string;
 };
 
+export type Ticket = {
+  _id: string;
+  slug: string;
+  articleTitle: string;
+  page: number;
+  description: string;
+  status: "open" | "closed";
+  createdAt: string;
+};
+
 export type ArticleStats = {
   sessions: number;
   resolved: number;

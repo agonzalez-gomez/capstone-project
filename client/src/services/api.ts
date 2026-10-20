@@ -3,6 +3,7 @@ import type {
   ArticleList,
   ArticleStats,
   SessionUpdate,
+  Ticket,
 } from "../types";
 
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5050";
@@ -115,6 +116,34 @@ async function getArticle(slug: string) {
   return data;
 }
 
+async function createTicket(
+  sessionId: string,
+  page: number,
+  description: string,
+) {
+  const response = await fetch(`${API_URL}/tickets`, {
+    method: "POST",
+    ...getAuthHeaders(),
+    body: JSON.stringify({ sessionId, page, description }),
+  });
+
+  return response.ok;
+}
+
+async function listTickets() {
+  const response = await fetch(`${API_URL}/tickets`, {
+    ...getAuthHeaders(),
+  });
+
+  if (!response.ok) {
+    return false;
+  }
+
+  const data = (await response.json()) as unknown as Ticket[];
+
+  return data;
+}
+
 async function getArticleStats(slug: string) {
   const response = await fetch(`${API_URL}/articles/${slug}/stats`, {
     ...getAuthHeaders(),
@@ -212,6 +241,8 @@ const API = {
   getArticleStats,
   startSession,
   updateSession,
+  createTicket,
+  listTickets,
 };
 
 export default API;

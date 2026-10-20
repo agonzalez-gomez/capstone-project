@@ -16,18 +16,20 @@ import { useNavigate, useParams } from "react-router-dom";
 import useAuth from "../hooks/useAuth";
 import FeedbackDialog from "../components/FeedbackDialog";
 import ArticleStatsFooter from "../components/ArticleStatsFooter";
+import FinishDialog from "../components/FinishDialog";
+import TicketDialog from "../components/TicketDialog";
 
 export default function Article() {
   const [article, setArticle] = useState<ArticleDetail | null>(null);
   const [pageIndex, setPageIndex] = useState(0);
-  const [feedbackReason, setFeedbackReason] = useState<
-    "resolved" | "finished" | null
-  >(null);
+  const [dialog, setDialog] = useState<"finish" | "feedback" | "ticket" | null>(
+    null,
+  );
   const [sessionId, setSessionId] = useState<string | null>(null);
 
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [feedbackError, setFeedbackError] = useState<string | null>(null);
+  const [dialogError, setDialogError] = useState<string | null>(null);
 
   // Prevents StrictMode from starting two sessions for one visit
   const loadedSlug = useRef<string | null>(null);
@@ -101,33 +103,58 @@ export default function Article() {
     }
   };
 
-  const openFeedback = (reason: "resolved" | "finished") => {
-    setFeedbackError(null);
-    setFeedbackReason(reason);
+  const openDialog = (name: "finish" | "feedback" | "ticket") => {
+    setDialogError(null);
+    setDialog(name);
   };
 
   const submitFeedback = async (feedback: Feedback) => {
     if (!sessionId) {
-      setFeedbackError("Unable to save feedback - session was not started!");
+      setDialogError("Unable to save feedback - session was not started!");
       return;
     }
 
     try {
       const saved = await API.updateSession(sessionId, {
         page: pageIndex + 1,
-        resolved: feedbackReason === "resolved",
+        resolved: true,
         ...feedback,
       });
 
       if (saved) {
-        setFeedbackReason(null);
+        setDialog(null);
         navigate("/");
       } else {
-        setFeedbackError("Error saving feedback!");
+        setDialogError("Error saving feedback!");
       }
     } catch (e) {
       console.error(e);
-      setFeedbackError("Error saving feedback!");
+      setDialogError("Error saving feedback!");
+    }
+  };
+
+  const submitTicket = async (description: string) => {
+    if (!sessionId) {
+      setDialogError("Unable to submit ticket - session was not started!");
+      return;
+    }
+
+    try {
+      const saved = await API.createTicket(
+        sessionId,
+        pageIndex + 1,
+        description,
+      );
+
+      if (saved) {
+        setDialog(null);
+        navigate("/tickets");
+      } else {
+        setDialogError("Error submitting ticket!");
+      }
+    } catch (e) {
+      console.error(e);
+      setDialogError("Error submitting ticket!");
     }
   };
 
@@ -239,11 +266,14 @@ export default function Article() {
               <Button
                 variant="outlined"
                 color="success"
-                onClick={() => openFeedback("resolved")}
+                onClick={() => openDialog("feedback")}
               >
                 Yes
               </Button>
-              <Button variant="outlined" disabled={isLastPage} onClick={next}>
+              <Button
+                variant="outlined"
+                onClick={() => (isLastPage ? openDialog("ticket") : next())}
+              >
                 No
               </Button>
             </Box>
@@ -260,7 +290,7 @@ export default function Article() {
         <Button onClick={back}>Back</Button>
         <Button
           variant="contained"
-          onClick={() => (isLastPage ? openFeedback("finished") : next())}
+          onClick={() => (isLastPage ? openDialog("finish") : next())}
         >
           {isLastPage ? "Finish" : "Next"}
         </Button>
@@ -268,16 +298,28 @@ export default function Article() {
 
       <ArticleStatsFooter slug={article.slug} />
 
+      <FinishDialog
+        open={dialog === "finish"}
+        onClose={() => setDialog(null)}
+        onResolved={() => openDialog("feedback")}
+        onUnresolved={() => openDialog("ticket")}
+      />
+
       <FeedbackDialog
-        open={feedbackReason !== null}
-        title={
-          feedbackReason === "resolved"
-            ? "Glad that fixed it!"
-            : "You've reached the end of this guide"
-        }
-        error={feedbackError}
-        onClose={() => setFeedbackReason(null)}
+        open={dialog === "feedback"}
+        title="Glad that fixed it!"
+        error={dialogError}
+        onClose={() => setDialog(null)}
         onSubmit={submitFeedback}
+      />
+
+      <TicketDialog
+        open={dialog === "ticket"}
+        articleTitle={article.title}
+        page={pageIndex + 1}
+        error={dialogError}
+        onClose={() => setDialog(null)}
+        onSubmit={submitTicket}
       />
     </Box>
   );

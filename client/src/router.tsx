@@ -6,6 +6,7 @@ import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Article from "./pages/Article";
+import Tickets from "./pages/Tickets";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ export const router = createBrowserRouter([
       {
         path: "/articles/:slug",
         element: <Article />,
+      },
+      {
+        path: "/tickets",
+        element: <Tickets />,
       },
       {
         path: "/login",
