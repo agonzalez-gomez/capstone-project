@@ -40,6 +40,14 @@ cd server && npm run dev
 cd client && npm run dev
 ```
 
+## Tests
+
+Server tests use Mocha, Chai, and Supertest against an in-memory MongoDB, so they don't need a database connection.
+
+```bash
+cd server && npm test
+```
+
 ## API
 
 All endpoints except `/register` and `/login` require a bearer token.
