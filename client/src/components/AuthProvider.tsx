@@ -4,6 +4,7 @@ import { AuthContext } from "../context/AuthContext";
 
 export default function AuthProvider({ children }: { children: ReactNode }) {
   const [signedIn, setSignedIn] = useState(false);
+  const [checking, setChecking] = useState(true);
 
   useEffect(() => {
     checkLoggedIn();
@@ -23,6 +24,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
       console.error(e);
       setSignedIn(false);
     }
+    setChecking(false);
   };
 
   const logout = () => {
@@ -31,7 +33,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return (
-    <AuthContext.Provider value={{ signedIn, checkLoggedIn, logout }}>
+    <AuthContext.Provider value={{ signedIn, checking, checkLoggedIn, logout }}>
       {children}
     </AuthContext.Provider>
   );

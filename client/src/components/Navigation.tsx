@@ -7,16 +7,21 @@ export default function Navigation() {
   const location = useLocation();
   const navigate = useNavigate();
 
-  const { signedIn, logout } = useAuth();
+  const { signedIn, checking, logout } = useAuth();
 
   useEffect(() => {
-    if (
-      signedIn &&
-      (location.pathname == "/login" || location.pathname == "/signup")
-    ) {
+    if (checking) return;
+
+    const authPage =
+      location.pathname == "/login" || location.pathname == "/signup";
+    const publicPage = authPage || location.pathname == "/about";
+
+    if (signedIn && authPage) {
       navigate("/");
+    } else if (!signedIn && !publicPage) {
+      navigate("/login");
     }
-  }, [signedIn, location.pathname]);
+  }, [signedIn, checking, location.pathname]);
 
   return (
     <nav>
