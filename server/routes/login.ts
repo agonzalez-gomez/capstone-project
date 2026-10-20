@@ -28,11 +28,9 @@ export default async function login(req: Request, res: Response) {
     });
 
     if (!userDoc || !userDoc._id) {
-      return res
-        .status(404)
-        .json({
-          message: "Incorrect username or password. You figure it out.",
-        });
+      return res.status(404).json({
+        message: "Incorrect username or password. You figure it out.",
+      });
     }
 
     if (!secret) {
@@ -45,11 +43,9 @@ export default async function login(req: Request, res: Response) {
     );
 
     if (!isPasswordValid) {
-      return res
-        .status(404)
-        .json({
-          message: "Incorrect username or password. You figure it out.",
-        });
+      return res.status(404).json({
+        message: "Incorrect username or password. You figure it out.",
+      });
     }
 
     const jwtpayload: JWTPayload = {
