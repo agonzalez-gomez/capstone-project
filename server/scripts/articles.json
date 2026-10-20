@@ -1,0 +1,548 @@
+[
+  {
+    "category": "Getting Started",
+    "title": "Welcome to the Help Center",
+    "slug": "welcome-to-the-help-center",
+    "subtitle": "A guide to finding your way around",
+    "description": "Learn how to navigate the help center and find the information you need.",
+    "pages": [
+      {
+        "title": "A helpful place to begin",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "This article introduces the help center and explains how its guides are organized.",
+        "page": 1
+      },
+      {
+        "title": "Finding an answer",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Browse by category or open an article to read its pages in order.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Managing Your Account",
+    "slug": "managing-your-account",
+    "subtitle": "Keep your account information up to date",
+    "description": "An overview of common account settings and profile details.",
+    "pages": [
+      {
+        "title": "Your profile",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Update the details associated with your profile so your account information stays current.",
+        "page": 1
+      },
+      {
+        "title": "Reviewing account settings",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Review your settings periodically and make changes when needed.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Troubleshooting Common Issues",
+    "slug": "troubleshooting-common-issues",
+    "subtitle": "A few steps to try when something goes wrong",
+    "description": "General steps for diagnosing and resolving common problems.",
+    "pages": [
+      {
+        "title": "Start with the basics",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Check that you have an active connection and try the action again. If the issue persists, refresh the page and note any message displayed.",
+        "page": 1
+      },
+      {
+        "title": "When you still need help",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Write down what you were doing and any error details before asking for help. A clear description can make it easier to understand the problem and suggest next steps.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Getting Started",
+    "title": "Navigating the Help Center",
+    "slug": "navigating-the-help-center",
+    "subtitle": "Find articles and browse topics",
+    "description": "Learn a few simple ways to explore help center content.",
+    "pages": [
+      {
+        "title": "Browse by category",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Choose a category to see related articles, then open a guide to view its pages.",
+        "page": 1
+      },
+      {
+        "title": "Use article pages",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Each article may contain several pages with additional details. Read them in order to follow the complete guide, and return to the category when you are ready to explore another topic.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Getting Started",
+    "title": "Understanding Help Articles",
+    "slug": "understanding-help-articles",
+    "subtitle": "Make the most of each guide",
+    "description": "An introduction to the information and sections found in help articles.",
+    "pages": [
+      {
+        "title": "Article summaries",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Article summaries provide a quick overview of the subject and help you decide whether a guide matches your question.",
+        "page": 1
+      },
+      {
+        "title": "Detailed instructions",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Follow each page for more context and practical steps. If a topic is unfamiliar, review the preceding page before continuing.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Updating Your Profile",
+    "slug": "updating-your-profile",
+    "subtitle": "Change the details associated with your account",
+    "description": "A general guide to reviewing and updating profile information.",
+    "pages": [
+      {
+        "title": "Review your information",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Open your profile settings and review the information currently associated with your account. Check each detail before making changes.",
+        "page": 1
+      },
+      {
+        "title": "Save your changes",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Update the fields that need attention and save your changes. Return to your profile afterward to confirm the new information appears as expected.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Account",
+    "title": "Keeping Your Account Secure",
+    "slug": "keeping-your-account-secure",
+    "subtitle": "Good habits for protecting your account",
+    "description": "Simple reminders for maintaining the security of your account.",
+    "pages": [
+      {
+        "title": "Protect your sign-in details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Keep your sign-in details private and avoid sharing them with others. Use a strong, unique password where your account settings allow it.",
+        "page": 1
+      },
+      {
+        "title": "Review account activity",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Pay attention to account activity and settings. If something looks unfamiliar, use the available account controls to secure your access and seek assistance.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Fixing Sign-In Problems",
+    "slug": "fixing-sign-in-problems",
+    "subtitle": "Steps to try when you cannot sign in",
+    "description": "Check a few common causes of sign-in difficulties.",
+    "pages": [
+      {
+        "title": "Check your sign-in details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Carefully check the information you entered and make sure there are no extra spaces. If you recently changed your password, use the updated one.",
+        "page": 1
+      },
+      {
+        "title": "Try again after refreshing",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Refresh the page and try again. If the problem continues, note the error message and contact support with a description of what happened.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Troubleshooting",
+    "title": "Resolving Page Loading Issues",
+    "slug": "resolving-page-loading-issues",
+    "subtitle": "What to try when a page does not load",
+    "description": "Basic steps for investigating pages that load slowly or fail to open.",
+    "pages": [
+      {
+        "title": "Check your connection",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Confirm that your internet connection is working, then reload the page. If other sites are also unavailable, the issue may be with your connection.",
+        "page": 1
+      },
+      {
+        "title": "Retry and note the details",
+        "imgURL": "https://picsum.photos/500/300",
+        "content": "Wait a short time and try loading the page again. If it still fails, note which page you were opening and any message displayed so support can investigate.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Power & Battery",
+    "title": "Device Will Not Power On",
+    "slug": "device-will-not-power-on",
+    "subtitle": "Steps to try when the screen stays dark",
+    "description": "Work through power source, battery, and button checks when the device does not start.",
+    "pages": [
+      {
+        "title": "Check the power source",
+        "imgURL": "https://picsum.photos/seed/device-will-not-power-on-1/500/300",
+        "content": "Confirm the power cable is firmly seated at both the wall outlet and the device. If you are using a vehicle adapter, make sure the vehicle's accessory power is on.",
+        "page": 1
+      },
+      {
+        "title": "Try a different outlet",
+        "imgURL": "https://picsum.photos/seed/device-will-not-power-on-2/500/300",
+        "content": "Plug the device into a different outlet that you know is working. Look for the charging indicator light near the power port; it should turn on within a few seconds.",
+        "page": 2
+      },
+      {
+        "title": "Inspect the battery",
+        "content": "Open the battery compartment and check that the battery is fully seated and the contacts are clean and dry. Reinsert the battery until it clicks into place.",
+        "page": 3
+      },
+      {
+        "title": "Hold the power button",
+        "imgURL": "https://picsum.photos/seed/device-will-not-power-on-4/500/300",
+        "content": "Press and hold the power button for 10 seconds, then release it and press it once more. This forces a full restart if the device was stuck in a low-power state.",
+        "page": 4
+      },
+      {
+        "title": "Still not starting?",
+        "content": "If the device still does not power on after these steps, note whether any lights turned on and how long you held the button. Include those details if you submit a ticket.",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "category": "Power & Battery",
+    "title": "Battery Drains Quickly",
+    "slug": "battery-drains-quickly",
+    "subtitle": "Get more run time from a full charge",
+    "description": "Find out what uses the most power and how to extend battery life in the field.",
+    "pages": [
+      {
+        "title": "Check the battery health screen",
+        "imgURL": "https://picsum.photos/seed/battery-drains-quickly-1/500/300",
+        "content": "Open Settings, then Battery, to see the current health percentage. A battery below 70 percent health will hold noticeably less charge and may need to be replaced.",
+        "page": 1
+      },
+      {
+        "title": "Lower the display brightness",
+        "imgURL": "https://picsum.photos/seed/battery-drains-quickly-2/500/300",
+        "content": "The display is the largest power draw after the cooling system. Set brightness to automatic or reduce it to 50 percent when working indoors.",
+        "page": 2
+      },
+      {
+        "title": "Turn off unused wireless features",
+        "content": "If you are not syncing data, turn off Wi-Fi and Bluetooth from the quick settings menu. Each radio left searching for a connection uses power continuously.",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "category": "Power & Battery",
+    "title": "Charging Indicator Is Blinking",
+    "slug": "charging-indicator-is-blinking",
+    "subtitle": "What a blinking amber light means",
+    "description": "Understand the charging indicator patterns and what to do about them.",
+    "pages": [
+      {
+        "title": "Read the blink pattern",
+        "imgURL": "https://picsum.photos/seed/charging-indicator-is-blinking-1/500/300",
+        "content": "A slow amber blink means the battery is too warm or too cold to charge safely. A fast amber blink means the charger is not supplying enough power. Move the device to room temperature or try the original charger, then check the light again.",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "category": "Power & Battery",
+    "title": "Replacing the Battery",
+    "slug": "replacing-the-battery",
+    "subtitle": "Swap in a spare battery safely",
+    "description": "How to remove and install a replacement battery without losing settings.",
+    "pages": [
+      {
+        "title": "Save your work and power off",
+        "imgURL": "https://picsum.photos/seed/replacing-the-battery-1/500/300",
+        "content": "Finish any active session and power the device off completely. Settings are kept in internal memory and will not be lost when the battery is removed.",
+        "page": 1
+      },
+      {
+        "title": "Install the new battery",
+        "imgURL": "https://picsum.photos/seed/replacing-the-battery-2/500/300",
+        "content": "Slide the release latch, remove the old battery, and insert the new one with the label facing up. Press until it clicks, then power the device on and confirm the battery level appears on the status bar.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Connectivity",
+    "title": "Bluetooth Will Not Pair",
+    "slug": "bluetooth-will-not-pair",
+    "subtitle": "Connect the device to a phone or tablet",
+    "description": "Steps for pairing the device with the companion app over Bluetooth.",
+    "pages": [
+      {
+        "title": "Turn on pairing mode",
+        "imgURL": "https://picsum.photos/seed/bluetooth-will-not-pair-1/500/300",
+        "content": "On the device, open Settings, then Connections, then Bluetooth, and tap Pair New Device. The Bluetooth icon will start blinking blue.",
+        "page": 1
+      },
+      {
+        "title": "Open the companion app",
+        "imgURL": "https://picsum.photos/seed/bluetooth-will-not-pair-2/500/300",
+        "content": "On your phone, open the companion app and tap Add Device. Keep the phone within 3 feet of the device during pairing.",
+        "page": 2
+      },
+      {
+        "title": "Forget old connections",
+        "content": "If the device was paired with another phone before, remove it from that phone's Bluetooth list first. Then try pairing again from the companion app.",
+        "page": 3
+      },
+      {
+        "title": "Restart both devices",
+        "imgURL": "https://picsum.photos/seed/bluetooth-will-not-pair-4/500/300",
+        "content": "Turn both the device and your phone off and back on, then repeat the pairing steps. This clears most temporary Bluetooth errors.",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "category": "Connectivity",
+    "title": "Data Is Not Syncing",
+    "slug": "data-is-not-syncing",
+    "subtitle": "Get readings uploading again",
+    "description": "What to check when recent readings do not appear in the online dashboard.",
+    "pages": [
+      {
+        "title": "Check the sync status",
+        "imgURL": "https://picsum.photos/seed/data-is-not-syncing-1/500/300",
+        "content": "Open the Sync screen on the device. It shows the time of the last successful upload and how many readings are waiting to send.",
+        "page": 1
+      },
+      {
+        "title": "Confirm the network connection",
+        "imgURL": "https://picsum.photos/seed/data-is-not-syncing-2/500/300",
+        "content": "Make sure the device is connected to Wi-Fi or paired with a phone that has a data connection. The signal icon on the status bar should show at least two bars.",
+        "page": 2
+      },
+      {
+        "title": "Start a manual sync",
+        "content": "Tap Sync Now on the Sync screen and wait for the progress bar to finish. Readings are kept on the device until they upload, so nothing is lost while offline.",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "category": "Display & Touchscreen",
+    "title": "Touchscreen Is Not Responding",
+    "slug": "touchscreen-is-not-responding",
+    "subtitle": "Fix taps that do not register",
+    "description": "A step-by-step guide for an unresponsive or inaccurate touchscreen.",
+    "pages": [
+      {
+        "title": "Clean the screen",
+        "imgURL": "https://picsum.photos/seed/touchscreen-is-not-responding-1/500/300",
+        "content": "Wipe the screen with a soft, lint-free cloth. Moisture, gel, or residue on the glass can block or confuse touch input.",
+        "page": 1
+      },
+      {
+        "title": "Remove gloves or use a stylus",
+        "imgURL": "https://picsum.photos/seed/touchscreen-is-not-responding-2/500/300",
+        "content": "Some gloves block touch input. Remove them or use the stylus stored in the side holder.",
+        "page": 2
+      },
+      {
+        "title": "Check for a screen protector",
+        "content": "Thick or bubbled screen protectors can reduce touch accuracy. Remove the protector and test the screen again.",
+        "page": 3
+      },
+      {
+        "title": "Restart the device",
+        "imgURL": "https://picsum.photos/seed/touchscreen-is-not-responding-4/500/300",
+        "content": "Hold the power button and choose Restart. If the screen does not respond enough to select Restart, hold the power button for 10 seconds to force a restart.",
+        "page": 4
+      },
+      {
+        "title": "Run touch calibration",
+        "imgURL": "https://picsum.photos/seed/touchscreen-is-not-responding-5/500/300",
+        "content": "Open Settings, then Display, then Calibrate Touch, and tap each target as it appears. Calibration takes about one minute.",
+        "page": 5
+      },
+      {
+        "title": "If problems continue",
+        "content": "Note which areas of the screen do not respond and whether the issue started after a drop or exposure to liquid. Include these details in a ticket so support can help.",
+        "page": 6
+      }
+    ]
+  },
+  {
+    "category": "Temperature & Storage",
+    "title": "Temperature Reading Is Out of Range",
+    "slug": "temperature-reading-is-out-of-range",
+    "subtitle": "When the storage temperature alert appears",
+    "description": "Steps for bringing the storage compartment back into its target range.",
+    "pages": [
+      {
+        "title": "Close and latch the lid",
+        "imgURL": "https://picsum.photos/seed/temperature-reading-is-out-of-range-1/500/300",
+        "content": "Make sure the lid is fully closed and the latch is engaged. A lid that is slightly open is the most common cause of temperature drift.",
+        "page": 1
+      },
+      {
+        "title": "Check the vents",
+        "imgURL": "https://picsum.photos/seed/temperature-reading-is-out-of-range-2/500/300",
+        "content": "Confirm the air vents on both sides of the unit are not blocked. Leave at least 2 inches of clearance around the unit.",
+        "page": 2
+      },
+      {
+        "title": "Wait for recovery",
+        "content": "After correcting the cause, the unit usually returns to range within 15 minutes. The temperature graph on the home screen shows whether it is trending back.",
+        "page": 3
+      }
+    ]
+  },
+  {
+    "category": "Temperature & Storage",
+    "title": "Cooling Fan Is Noisy",
+    "slug": "cooling-fan-is-noisy",
+    "subtitle": "Rattling, buzzing, or grinding sounds",
+    "description": "How to find and fix the source of unusual fan noise.",
+    "pages": [
+      {
+        "title": "Place the unit on a flat surface",
+        "imgURL": "https://picsum.photos/seed/cooling-fan-is-noisy-1/500/300",
+        "content": "Uneven surfaces can make the housing vibrate against the fan. Move the unit to a flat, stable surface and listen again.",
+        "page": 1
+      },
+      {
+        "title": "Check for debris",
+        "imgURL": "https://picsum.photos/seed/cooling-fan-is-noisy-2/500/300",
+        "content": "Power the unit off and look through the vent grille for loose debris. Remove anything you can reach without opening the housing.",
+        "page": 2
+      },
+      {
+        "title": "Listen at different speeds",
+        "imgURL": "https://picsum.photos/seed/cooling-fan-is-noisy-3/500/300",
+        "content": "Open Settings, then Diagnostics, then Fan Test. The test runs the fan at low, medium, and high speeds so you can tell when the noise happens.",
+        "page": 3
+      },
+      {
+        "title": "Note the results",
+        "content": "If the noise happens at every speed or sounds like grinding, stop using the fan test. Record what you heard at each speed for your ticket.",
+        "page": 4
+      }
+    ]
+  },
+  {
+    "category": "Temperature & Storage",
+    "title": "Checking the Temperature Log",
+    "slug": "checking-the-temperature-log",
+    "subtitle": "Review past temperature readings",
+    "description": "Where to find the temperature history recorded by the device.",
+    "pages": [
+      {
+        "title": "Open the log",
+        "imgURL": "https://picsum.photos/seed/checking-the-temperature-log-1/500/300",
+        "content": "From the home screen, tap History, then Temperature. The log shows readings every 5 minutes for the last 30 days, with any out-of-range periods highlighted in red.",
+        "page": 1
+      }
+    ]
+  },
+  {
+    "category": "Alarms & Alerts",
+    "title": "Silencing a Repeating Alarm",
+    "slug": "silencing-a-repeating-alarm",
+    "subtitle": "Acknowledge an alarm that keeps sounding",
+    "description": "How to acknowledge an active alarm and stop it from repeating.",
+    "pages": [
+      {
+        "title": "Acknowledge the alarm",
+        "imgURL": "https://picsum.photos/seed/silencing-a-repeating-alarm-1/500/300",
+        "content": "Tap the alarm banner at the top of the screen, then tap Acknowledge. The sound stops, but the banner stays until the cause is fixed.",
+        "page": 1
+      },
+      {
+        "title": "Fix the cause",
+        "content": "Open the alarm details to see what triggered it. The alarm will sound again in 10 minutes if the cause has not been corrected.",
+        "page": 2
+      }
+    ]
+  },
+  {
+    "category": "Alarms & Alerts",
+    "title": "Understanding Alert Codes",
+    "slug": "understanding-alert-codes",
+    "subtitle": "What the codes on the alert screen mean",
+    "description": "A guide to the alert code families and what to check for each one.",
+    "pages": [
+      {
+        "title": "Where to find the code",
+        "imgURL": "https://picsum.photos/seed/understanding-alert-codes-1/500/300",
+        "content": "Alert codes appear in the lower corner of the alert banner and in History, then Alerts. Each code starts with a letter that tells you the category.",
+        "page": 1
+      },
+      {
+        "title": "P codes: power",
+        "imgURL": "https://picsum.photos/seed/understanding-alert-codes-2/500/300",
+        "content": "Codes starting with P relate to power and battery. Check the power source and battery first, then see the Power & Battery articles.",
+        "page": 2
+      },
+      {
+        "title": "T codes: temperature",
+        "imgURL": "https://picsum.photos/seed/understanding-alert-codes-3/500/300",
+        "content": "Codes starting with T relate to the storage compartment temperature. Check the lid, the vents, and the room temperature.",
+        "page": 3
+      },
+      {
+        "title": "C codes: connectivity",
+        "imgURL": "https://picsum.photos/seed/understanding-alert-codes-4/500/300",
+        "content": "Codes starting with C relate to Bluetooth, Wi-Fi, or data sync. These do not affect storage, but readings will wait on the device until the connection returns.",
+        "page": 4
+      },
+      {
+        "title": "S codes: system",
+        "content": "Codes starting with S relate to the device software. Restart the device and check for updates. If the code returns, submit a ticket with the full code.",
+        "page": 5
+      }
+    ]
+  },
+  {
+    "category": "Software Updates",
+    "title": "Installing a Software Update",
+    "slug": "installing-a-software-update",
+    "subtitle": "Keep your device up to date",
+    "description": "How to check for, download, and install device software updates.",
+    "pages": [
+      {
+        "title": "Check for updates",
+        "imgURL": "https://picsum.photos/seed/installing-a-software-update-1/500/300",
+        "content": "Open Settings, then System, then Software Update, and tap Check Now. The current version number is shown at the top of the screen.",
+        "page": 1
+      },
+      {
+        "title": "Prepare the device",
+        "content": "Connect the device to power and Wi-Fi before starting. Updates take about 10 minutes and the device will restart once.",
+        "page": 2
+      },
+      {
+        "title": "Install and confirm",
+        "imgURL": "https://picsum.photos/seed/installing-a-software-update-3/500/300",
+        "content": "Tap Install and wait for the device to restart. When it finishes, return to the Software Update screen to confirm the new version number.",
+        "page": 3
+      }
+    ]
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "name": "capstone-project",
+  "version": "1.0.0",
+  "description": "MERN Capstone Project",
+  "type": "module",
+  "scripts": {
+    "install-all": "npm install && cd client && npm install && cd ../server && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.0"
+  }
+}
